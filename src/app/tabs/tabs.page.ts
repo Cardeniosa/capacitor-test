@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, ViewChild } from '@angular/core';
+import { IonTabs } from '@ionic/angular';
 
 @Component({
   selector: 'app-tabs',
@@ -7,6 +8,17 @@ import { Component } from '@angular/core';
 })
 export class TabsPage {
 
-  constructor() {}
+  @ViewChild('ionTabs', { static: true }) tabs: IonTabs;
+  selected: boolean;
 
+  constructor() {
+  }
+
+  ionViewDidEnter() {
+    this.tabs.ionTabsWillChange.subscribe(tab => console.log(tab));
+  }
+
+  changeFan() {
+    this.selected = true;
+  }
 }
