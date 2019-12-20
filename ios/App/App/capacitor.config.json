@@ -1,1 +1,8 @@
-{}
+{
+  "appId": "com.onewingsoft.capacitorapp",
+  "appName": "capacitorApp",
+  "bundledWebRuntime": false,
+  "npmClient": "npm",
+  "webDir": "www",
+  "cordova": {}
+}
